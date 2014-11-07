@@ -1,6 +1,6 @@
 {
   "name": "coffeescript-helpers",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "CoffeeScript helper functions",
   "main": "index.js",
   "scripts": {
