@@ -7,6 +7,9 @@
     "prepublish": "coffee -c -s -l < README.md > index.js",
     "test": "mocha"
   },
+  "files": [
+    "index.js"
+  ],
   "author": "Stéphane Alnet <stephane@shimaore.net> (http://stephane.shimaore.net/)",
   "license": "MIT",
   "devDependencies": {
