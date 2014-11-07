@@ -13,6 +13,8 @@
   "author": "Stéphane Alnet <stephane@shimaore.net> (http://stephane.shimaore.net/)",
   "license": "MIT",
   "devDependencies": {
-    "coffee-script": "^1.8.0"
+    "chai": "^1.9.2",
+    "coffee-script": "^1.8.0",
+    "mocha": "^2.0.1"
   }
 }

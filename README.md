@@ -3,7 +3,7 @@ CoffeeScript helpers
 
 `require('coffeescript-helpers').helpers` contains the helpers installed by CoffeeScript.
 
-    @helpers = """
+    @helpers = helpers = """
     var __slice = [].slice;
     var __hasProp = {}.hasOwnProperty;
     var __bind = function(fn, me){

@@ -1,0 +1,4 @@
+--require chai
+--require coffee-script
+--colors
+--compilers coffee.md:coffee-script/register
