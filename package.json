@@ -1,0 +1,15 @@
+{
+  "name": "coffeescript-helpers",
+  "version": "1.0.0",
+  "description": "CoffeeScript helper functions",
+  "main": "index.js",
+  "scripts": {
+    "prepublish": "coffee -c -s -l < README.md > index.js",
+    "test": "mocha"
+  },
+  "author": "Stéphane Alnet <stephane@shimaore.net> (http://stephane.shimaore.net/)",
+  "license": "MIT",
+  "devDependencies": {
+    "coffee-script": "^1.8.0"
+  }
+}
