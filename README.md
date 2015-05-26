@@ -27,5 +27,10 @@ CoffeeScript helpers
     """.replace /\n/g, ''
 
 `require('coffeescript-helpers').p_fun` will map a (compiled) CoffeeScript function to a JavaScript function with the proper helpers installed. It is intended to be used for CouchDB `map` functions, for example.
+Usage: `p_fun(f)`, `p_fun(extra,f)`
 
-    @p_fun = (f) -> "(function (){#{helpers} return #{f};})();"
+    @p_fun = (extra,f) ->
+      if not f?
+        f = extra
+        extra = ''
+      return "(function (){#{extra} #{helpers} return #{f};})();"

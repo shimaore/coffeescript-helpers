@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "prepublish": "coffee -c -s -l < README.md > index.js",
+    "pretest": "npm install",
     "test": "mocha"
   },
   "files": [

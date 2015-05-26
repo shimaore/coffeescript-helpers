@@ -31,3 +31,10 @@
         fun = eval res
 
         {outcome:fun(3,[1,2,3,4])}.should.have.property 'outcome', true
+
+      it 'should add extra properties', ->
+        extra = "var data = #{JSON.stringify life:42};"
+        res = require('..').p_fun extra, -> data.life
+        fun = eval res
+
+        {outcome:fun()}.should.have.property 'outcome', 42
