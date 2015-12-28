@@ -7,6 +7,7 @@
       it 'should export p_fun', ->
         require('..').should.have.property 'p_fun'
 
+    describe 'p_fun', ->
       it 'should rewrite a function', ->
         res = require('..').p_fun (x) -> x+2
         res.should.be.a 'string'

@@ -1,7 +1,15 @@
 CoffeeScript helpers
 ====================
 
-`require('coffeescript-helpers').helpers` contains the helpers installed by CoffeeScript.
+Usage
+-----
+
+`{helpers,p_fun,p_exec} = require 'coffeescript-helpers'`
+
+`helpers`
+---------
+
+Contains the helpers installed by CoffeeScript.
 
     @helpers = helpers = """
     var slice = [].slice;
@@ -26,8 +34,10 @@ CoffeeScript helpers
     var modulo = function(a, b) { return (+a % (b = +b) + b) % b; };
     """.replace /\n/g, ''
 
-`require('coffeescript-helpers').p_fun` will map a (compiled) CoffeeScript function to a JavaScript function with the proper helpers installed. It is intended to be used for CouchDB `map` functions, for example.
-Usage: `p_fun(f)`, `p_fun(extra,f)`
+`p_fun`
+-------
+
+Map a (compiled) CoffeeScript function to a JavaScript function with the proper helpers installed. It is intended to be used for CouchDB `map` functions, for example.
 
     @p_fun = (extra,f) ->
       if not f?
