@@ -1,5 +1,6 @@
     chai = require 'chai'
     chai.should()
+    vm = require 'vm'
 
     describe 'The module', ->
       it 'should export helpers', ->
@@ -39,3 +40,12 @@
         fun = eval res
 
         {outcome:fun()}.should.have.property 'outcome', 42
+
+    describe 'p_exec', ->
+      it 'should execute code fragments', (done) ->
+        res = require('..').p_exec -> alert 'hi'
+        sandbox =
+          alert: (text) ->
+            text.should.equal 'hi'
+            done()
+        vm.runInNewContext res, sandbox

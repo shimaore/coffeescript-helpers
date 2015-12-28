@@ -44,3 +44,14 @@ Map a (compiled) CoffeeScript function to a JavaScript function with the proper 
         f = extra
         extra = ''
       return "(function (){#{extra} #{helpers} return #{f};})();"
+
+`p_exec`
+--------
+
+Map a (compiled) CoffeeScript function so that it actually gets executed. It is intended to wrap functions server-side so that they execute client-side (in ZappaJS for example).
+
+    @p_exec = (extra,f) ->
+      if not f?
+        f = extra
+        extra = ''
+      return "(function (){#{extra} #{helpers} return (#{f})();})();"
